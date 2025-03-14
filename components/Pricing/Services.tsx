@@ -3,7 +3,7 @@ import Container from '../Container'
 import { companyLogos, planData } from '@/contants'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowBigLeft, ArrowRight } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 
 const Services = () => {
   return (

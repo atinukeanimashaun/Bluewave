@@ -8,6 +8,17 @@ import Image from 'next/image';
 import { useAppContext } from '@/context/AppContext';
 import { useRouter } from 'next/navigation';
 
+type Yacht = {
+  id: string;
+  title: string;
+  image: string[];
+  category: string;
+  length: string;
+  year: string;
+  capacity: string;
+  price: string;
+};
+
 const Yachts = () => {
   const [selectedCategory, setSelectedCategory] = useState("Yachts & Boats");
   const categories = [...new Set(yachtData.map((yacht) => yacht.category))];
@@ -18,10 +29,10 @@ const Yachts = () => {
   const filteredYachts =
     selectedCategory === "Yachts & Boats"
       ? yachtData
-      : yachtData.filter((yacht) => yacht.category === selectedCategory);
+      : yachtData.filter((yacht: Yacht) => yacht.category === selectedCategory);
 
-  const handleSeeMore = (yacht: any) => {
-    setSelectedPage(yacht);
+  const handleSeeMore = (yacht: Yacht) => {
+    setSelectedPage(yacht.id);
     const yachtSlug = yacht.title.toLowerCase().replace(/\s+/g, "-");
     router.push(`/yacht/${yachtSlug}`);
   };

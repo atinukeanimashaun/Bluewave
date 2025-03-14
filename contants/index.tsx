@@ -104,7 +104,7 @@ export const serviceData = [
   {
     image: "/images/Boat.svg",
     title: "Unforgettable Experiences",
-    description: "Whether you're seeking tranquility, adventure, or a combination of both, our yacht and boat rentals.",
+    description: "Whether you&apos;re seeking tranquility, adventure, or a combination of both, our yacht and boat rentals.",
   },
 ];
 
@@ -162,7 +162,7 @@ export const eventData = [
 export const testimonialsData = [
   {
     id: "1",
-    description: "Renting a yacht from Rent Yacht and Boat was an absolute dream realized! From the moment we stepped on board, the crew made us feel like royalty. The vessel was pristine, the service impeccable, and the views breathtaking. This experience exceeded our expectations in every way. Can't wait to set sail again!",
+    description: "Renting a yacht from Rent Yacht and Boat was an absolute dream realized! From the moment we stepped on board, the crew made us feel like royalty. The vessel was pristine, the service impeccable, and the views breathtaking. This experience exceeded our expectations in every way. Can&apos;t wait to set sail again!",
     name: "Demi Wilkinson",
     title: "Designer, Facebook",
     avatar: "/images/avatar1.webp",
@@ -176,14 +176,14 @@ export const testimonialsData = [
   },
   {
     id: "3",
-    description: "Our company retreat at sea was a resounding success, thanks to Rent Yacht and Boat. The event planning team ensured every detail was perfection, from the catering to team-building activities. The crew's professionalism and the stunning backdrop of the open waters made it an unforgettable experience for our team.",
+    description: "Our company retreat at sea was a resounding success, thanks to Rent Yacht and Boat. The event planning team ensured every detail was perfection, from the catering to team-building activities. The crew&apos;s professionalism and the stunning backdrop of the open waters made it an unforgettable experience for our team.",
     name: "Blanche Field",
     title: "Manager, Electric",
     avatar: "/images/avatar3.webp",
   },
   {
     id: "4",
-    description: "The vessel was pristine, the service impeccable, and the views breathtaking. This experience exceeded our expectations in every way. Can't wait to set sail again!",
+    description: "The vessel was pristine, the service impeccable, and the views breathtaking. This experience exceeded our expectations in every way. Can&apos;t wait to set sail again!",
     name: "Jessica Robinson",
     title: "Manager, Barst",
     avatar: "/images/avatar4.webp",
@@ -365,7 +365,7 @@ export const cruiseData = [
   {
     id: "1",
     title: "Culinary Cruise",
-    description: "Immerse yourself in a gastronomic journey at sea with customizable menus prepared by our onboard chefs. Whether it's a romantic dinner or a gourmet feast with friends, savor exquisite.",
+    description: "Immerse yourself in a gastronomic journey at sea with customizable menus prepared by our onboard chefs. Whether it&apos;s a romantic dinner or a gourmet feast with friends, savor exquisite.",
     image: "/images/BlueWave31.jpg",
     icon: "/images/Culinary.svg",
   },
@@ -458,7 +458,7 @@ export const pricingData = [
   {
     id: "3",
     title: "Premium",
-    description: "Whether it's exploring coastal wonders, engaging in water sports, or hosting an event.",
+    description: "Whether it&apos;s exploring coastal wonders, engaging in water sports, or hosting an event.",
     price: "$2020/month",
     list: [
       "Half-Day Packages",

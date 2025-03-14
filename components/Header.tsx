@@ -7,7 +7,6 @@ import Image from 'next/image';
 import BlueWaveLogo from '@/images/BlueWaveLogo.png'
 import { AlignLeft, X } from 'lucide-react';
 import { motion } from "motion/react"
-import { useOutsideClick } from '@/hooks/useOutsideClick';
 
 const Header = () => {
   const [nav, setNav] = useState(false);

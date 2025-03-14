@@ -10,15 +10,25 @@ import { BsArrowRight } from 'react-icons/bs'
 import { useAppContext } from '@/context/AppContext'
 import { useRouter } from 'next/navigation'
 
+type BlogPost = {
+  id: string;
+  title: string;
+  category: string;
+  date: string;
+  description: string;
+  image: string;
+};
+
 const Blog = () => {
   const { setSelectedPage } = useAppContext();
   const router = useRouter();
 
-  const handleBlogDetail = (Blog: any) => {
-    setSelectedPage(Blog);
-    const BlogSlug = Blog.title.toLowerCase().replace(/\s+/g, "-");
-    router.push(`/Blog/${BlogSlug}`);
+  const handleBlogDetail = (blog: BlogPost) => {
+    setSelectedPage(blog.id);
+    const blogSlug = blog.title.toLowerCase().replace(/\s+/g, "-");
+    router.push(`/blog/${blogSlug}`);
   };
+
   return (
     <div className="py-20">
       <Container>
@@ -30,7 +40,7 @@ const Blog = () => {
               Featured Articles
             </h1>
 
-            <Link href="/insight" className="py-2 px-5 w-36 text-[20px] text-black capitalize border-[1px] border-spaceCadet rounded-full hover:bg-spaceCadet hover:text-white hoverEffect cursor-pointer">
+            <Link href="/blog" className="py-2 px-5 w-36 text-[20px] text-black capitalize border-[1px] border-spaceCadet rounded-full hover:bg-spaceCadet hover:text-white hoverEffect cursor-pointer">
               learn more
             </Link>
           </div>

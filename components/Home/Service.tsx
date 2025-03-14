@@ -19,7 +19,7 @@ const Service = () => {
                 </h1>
 
                 <p className="py-2 text-[20px] lg:max-w-[500px]">
-                  Whether you're planning an intimate sunset cruise, a corporate event, or a family getaway, our fleet has the perfect vessel to suit your needs.
+                  Whether you&apos;re planning an intimate sunset cruise, a corporate event, or a family getaway, our fleet has the perfect vessel to suit your needs.
                 </p>
 
                 <div className="my-10">

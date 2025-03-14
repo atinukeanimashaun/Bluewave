@@ -29,7 +29,7 @@ const Testimonials = ({ page }: { page: "page1" | "page2" }) => {
               <Container className="flex flex-col items-center gap-3 lg:gap-8">
                 <div className="md:max-w-[1000px]">
                   <p className="text-[20px] md:text-[28px] lg:text-[34px] my-3 md:h-64">
-                    "{testimonialsData[currentIndex].description}"
+                  &quot;{testimonialsData[currentIndex].description}&quot;
                   </p>
 
                   <div className="flex flex-col md:flex-row justify-between md:items-center gap-3 w-full md:mt-8">
@@ -93,7 +93,7 @@ const Testimonials = ({ page }: { page: "page1" | "page2" }) => {
             <p className="text-[17px] uppercase text-blueberry my-2">testimonials</p>
 
             <p className="text-[20px] md:text-[26px] lg:text-[34px] max-w-[800px]">
-              "Renting a yacht from Rent Yacht and Boat was an absolute dream realized! From the moment we stepped on board, the crew made us feel like royalty. The vessel was pristine, the service impeccable, and the views breathtaking. This experience exceeded our expectations in every way."
+            &quot;Renting a yacht from Rent Yacht and Boat was an absolute dream realized! From the moment we stepped on board, the crew made us feel like royalty. The vessel was pristine, the service impeccable, and the views breathtaking. This experience exceeded our expectations in every way.&quot;
             </p>
 
             <div className="flex gap-3 mt-8">

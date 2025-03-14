@@ -1,6 +1,5 @@
 import React from 'react'
 import HeroLayout from '../HeroLayout'
-import Link from 'next/link'
 
 const Hero = () => {
   return (

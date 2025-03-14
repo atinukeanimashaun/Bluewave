@@ -11,6 +11,15 @@ import Link from 'next/link';
 import { useAppContext } from '@/context/AppContext';
 import { useRouter } from 'next/navigation';
 
+type Event = {
+  id: string;
+  title: string;
+  image: string;
+  category: string;
+  date: string;
+  price: string;
+};
+
 const Events = () => {
   const [selectedCategory, setSelectedCategory] = useState("All Events");
   const categories = [...new Set(eventData.map((event) => event.category))];
@@ -21,10 +30,10 @@ const Events = () => {
   const filteredEvents =
     selectedCategory === "All Events"
       ? eventData
-      : eventData.filter((event) => event.category === selectedCategory);
+      : eventData.filter((event: Event) => event.category === selectedCategory);
 
-  const handleDetail = (event: any) => {
-    setSelectedPage(event);
+  const handleDetail = (event: Event) => {
+    setSelectedPage(event.id);
     const eventSlug = event.title.toLowerCase().replace(/\s+/g, "-");
     router.push(`/event/${eventSlug}`);
   };

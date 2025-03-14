@@ -1,29 +1,38 @@
-"use client"
+"use client";
 
-import React, { useState } from 'react'
-import Container from '../Container'
-import { blogData } from '@/contants';
-import { useAppContext } from '@/context/AppContext';
-import { useRouter } from 'next/navigation';
-import Image from 'next/image';
-import { Button } from '../ui/button';
-import { BsArrowRight } from 'react-icons/bs';
-import RecentPost from './RecentPost';
+import React, { useState } from "react";
+import Container from "../Container";
+import { blogData } from "@/contants";
+import { useAppContext } from "@/context/AppContext";
+import { useRouter } from "next/navigation";
+import Image from "next/image";
+import { Button } from "../ui/button";
+import { BsArrowRight } from "react-icons/bs";
+import RecentPost from "./RecentPost";
+
+type BlogPost = {
+  id: string;
+  title: string;
+  category: string;
+  date: string;
+  description: string;
+  image: string;
+};
 
 const Blogs = () => {
-  const [selectedCategory, setSelectedCategory] = useState("All Blogs");
+  const [selectedCategory, setSelectedCategory] = useState<string>("All Blogs");
   const categories = [...new Set(blogData.map((blog) => blog.category))];
 
   const { setSelectedPage } = useAppContext();
   const router = useRouter();
 
-  const filteredBlog =
+  const filteredBlog: BlogPost[] =
     selectedCategory === "All Blogs"
       ? blogData
-      : blogData.filter((blog) => blog.category === selectedCategory);
+      : blogData.filter((blog: BlogPost) => blog.category === selectedCategory);
 
-  const handleBlogDetail = (blog: any) => {
-    setSelectedPage(blog);
+  const handleBlogDetail = (blog: BlogPost) => {
+    setSelectedPage(blog.id);
     const blogSlug = blog.title.toLowerCase().replace(/\s+/g, "-");
     router.push(`/blog/${blogSlug}`);
   };
@@ -36,31 +45,29 @@ const Blogs = () => {
             <div key={item.id} className="space-y-3">
               <Image
                 src={item.image}
-                alt='item.image'
+                alt={item.title}
                 width={500}
                 height={300}
                 className="w-[400px] h-[600px] object-cover rounded-xl"
               />
 
-              <p className="text-[18px] font-medium">
-                {item.date}
-              </p>
+              <p className="text-[18px] font-medium">{item.date}</p>
 
-              <h1 onClick={() => handleBlogDetail(item)}
-              className="font-semibold text-[28px] text-spaceCadet hover:text-brightYellow hoverEffect">
+              <h1
+                onClick={() => handleBlogDetail(item)}
+                className="font-semibold text-[28px] text-spaceCadet hover:text-brightYellow hoverEffect"
+              >
                 {item.title}
               </h1>
 
-              <p className="text-[18px] font-medium">
-                {item.description}
-              </p>
+              <p className="text-[18px] font-medium">{item.description}</p>
 
-              <Button variant="ghost"
-              onClick={() => handleBlogDetail(item)}
+              <Button
+                variant="ghost"
+                onClick={() => handleBlogDetail(item)}
                 className="text-[18px] capitalize text-spaceCadet hover:text-brightYellow hoverEffect p-0"
               >
                 read more
-
                 <BsArrowRight />
               </Button>
             </div>
@@ -73,13 +80,15 @@ const Blogs = () => {
           <h1 className="font-semibold text-[24px] capitalize">categories</h1>
 
           <div className="flex flex-row gap-4 my-10">
-            {/* All Events Button */}
-            <Button variant="outline"
+            {/* All Blogs Button */}
+            <Button
+              variant="outline"
               onClick={() => setSelectedCategory("All Blogs")}
-              className={`font-semibold text-[18px] px-4 py-2 border rounded-full duration-300 transition-all cursor-pointer ${selectedCategory === "All Blogs"
-                ? "border-spaceCadet text-white bg-spaceCadet hover:bg-spaceCadet hover:text-white"
-                : "border-spaceCadet text-spaceCadet hover:bg-white"
-                }`}
+              className={`font-semibold text-[18px] px-4 py-2 border rounded-full duration-300 transition-all cursor-pointer ${
+                selectedCategory === "All Blogs"
+                  ? "border-spaceCadet text-white bg-spaceCadet hover:bg-spaceCadet hover:text-white"
+                  : "border-spaceCadet text-spaceCadet hover:bg-white"
+              }`}
             >
               All Blogs
             </Button>
@@ -87,13 +96,15 @@ const Blogs = () => {
             {/* Other Categories */}
             <div className="flex flex-wrap gap-4">
               {categories.map((category) => (
-                <Button variant="outline"
+                <Button
+                  variant="outline"
                   key={category}
                   onClick={() => setSelectedCategory(category)}
-                  className={`px-4 py-2 text-[18px] rounded-full border transition-all duration-300 ${selectedCategory === category
-                    ? "bg-spaceCadet text-white border-spaceCadet"
-                    : "border-spaceCadet text-spaceCadet hover:bg-white"
-                    }`}
+                  className={`px-4 py-2 text-[18px] rounded-full border transition-all duration-300 ${
+                    selectedCategory === category
+                      ? "bg-spaceCadet text-white border-spaceCadet"
+                      : "border-spaceCadet text-spaceCadet hover:bg-white"
+                  }`}
                 >
                   {category}
                 </Button>
@@ -105,7 +116,7 @@ const Blogs = () => {
         <RecentPost />
       </div>
     </Container>
-  )
-}
+  );
+};
 
-export default Blogs
+export default Blogs;

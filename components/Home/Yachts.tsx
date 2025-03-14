@@ -13,6 +13,17 @@ import { useAppContext } from "@/context/AppContext";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 
+type Yacht = {
+  id: string;
+  title: string;
+  image: string[];
+  category: string;
+  length: string;
+  year: string;
+  capacity: string;
+  price: string;
+};
+
 const Yachts = ({ page }: { page: "home" | "about" | "yacht&boat" }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -27,8 +38,8 @@ const Yachts = ({ page }: { page: "home" | "about" | "yacht&boat" }) => {
     setCurrentIndex((prevIndex) => (prevIndex === yachtData.length - 1 ? 0 : prevIndex + 1));
   }, []);
 
-  const handleSeeMore = (yacht: any) => {
-    setSelectedPage(yacht);
+  const handleSeeMore = (yacht: Yacht) => {
+    setSelectedPage(yacht.id);
     const yachtSlug = yacht.title.toLowerCase().replace(/\s+/g, "-");
     router.push(`/yacht/${yachtSlug}`);
   };

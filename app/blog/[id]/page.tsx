@@ -5,12 +5,6 @@ import { blogData } from "@/contants";
 import Hero from "@/components/Hero";
 import Container from "@/components/Container";
 import Image from "next/image";
-import SocialMedia from "@/components/SocialMedia";
-import { IoCall, IoLocationSharp } from "react-icons/io5";
-import { MdOutlineEmail } from "react-icons/md";
-import Link from 'next/link'
-import { FaMoneyBillWave, FaCalendarDay } from "react-icons/fa";
-import { MdTram } from "react-icons/md";
 import BlueWave36 from "@/images/BlueWave36.jpg"
 import ImageLayout from "@/components/About/ImageLayout";
 import RecentPost from "@/components/Blog/RecentPost";
@@ -47,12 +41,12 @@ const BlogDetail = () => {
             
             <div className="border-l-4 border-l-spaceCadet">
               <h2 className="font-semibold text-[30px] pl-10 text-center">
-              Yacht rentals are not just about the destination; they're about the moments you create along the way.
+              Yacht rentals are not just about the destination; they&apos;re about the moments you create along the way.
               </h2>
             </div>
             
             <p className="text-[18px]">
-            A yacht is more than a vessel; it's a floating haven of opulence. From sleek exteriors to lavish interiors, yacht rentals promise an indulgent experience that transcends the ordinary. Meticulously designed cabins, spacious lounges, and state-of-the-art amenities create an ambiance of pure luxury on the open seas.
+            A yacht is more than a vessel; it&apos;s a floating haven of opulence. From sleek exteriors to lavish interiors, yacht rentals promise an indulgent experience that transcends the ordinary. Meticulously designed cabins, spacious lounges, and state-of-the-art amenities create an ambiance of pure luxury on the open seas.
             </p>
 
             <Image
@@ -68,7 +62,7 @@ const BlogDetail = () => {
             <h2 className="font-semibold text-[30px]">Luxurious Havens on Water</h2>
 
             <p className="text-[18px]">
-            One of the captivating aspects of yacht rentals is the ability to tailor the experience to your desires. Whether it's a romantic getaway, a family vacation, or a celebration with friends, yacht charters offer flexibility in crafting an itinerary that suits your preferences. The journey becomes a personalized symphony, orchestrated to match your rhythm.
+            One of the captivating aspects of yacht rentals is the ability to tailor the experience to your desires. Whether it&apos;s a romantic getaway, a family vacation, or a celebration with friends, yacht charters offer flexibility in crafting an itinerary that suits your preferences. The journey becomes a personalized symphony, orchestrated to match your rhythm.
             </p>
 
             <ul className="list-disc marker:text-brightYellow px-6">
@@ -87,7 +81,7 @@ const BlogDetail = () => {
             </ul>
 
             <p className="text-[18px]">
-            Yacht rentals embody a lifestyle beyond the ordinary. It's a fusion of comfort, sophistication, and the thrill of exploration. Stepping onto a yacht is not just a departure from the shore; it's an entry into a world where luxury meets the expanse of the sea.
+            Yacht rentals embody a lifestyle beyond the ordinary. It&apos;s a fusion of comfort, sophistication, and the thrill of exploration. Stepping onto a yacht is not just a departure from the shore; it&apos;s an entry into a world where luxury meets the expanse of the sea.
             </p>
           </div>
 

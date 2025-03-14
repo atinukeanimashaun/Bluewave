@@ -7,12 +7,21 @@ import { blogData } from '@/contants'
 import { useAppContext } from '@/context/AppContext'
 import { useRouter } from 'next/navigation'
 
+type BlogPost = {
+  id: string;
+  title: string;
+  category: string;
+  date: string;
+  description: string;
+  image: string;
+};
+
 const RecentPost = () => {
   const { setSelectedPage } = useAppContext();
   const router = useRouter();
 
-  const handleBlogDetail = (Blog: any) => {
-    setSelectedPage(Blog);
+  const handleBlogDetail = (Blog: BlogPost) => {
+    setSelectedPage(Blog.id);
     const BlogSlug = Blog.title.toLowerCase().replace(/\s+/g, "-");
     router.push(`/Blog/${BlogSlug}`);
   };

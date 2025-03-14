@@ -11,13 +11,21 @@ import Link from 'next/link';
 import { useAppContext } from '@/context/AppContext';
 import { useRouter } from 'next/navigation';
 
+type Event = {
+  id: string;
+  title: string;
+  image: string;
+  category: string;
+  date: string;
+  price: string;
+};
 
 const Event = () => {
   const { setSelectedPage } = useAppContext();
   const router = useRouter();
 
-  const handleDetail = (event: any) => {
-    setSelectedPage(event);
+  const handleDetail = (event: Event) => {
+    setSelectedPage(event.id);
     const eventSlug = event.title.toLowerCase().replace(/\s+/g, "-");
     router.push(`/event/${eventSlug}`);
   };

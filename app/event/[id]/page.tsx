@@ -130,7 +130,7 @@ const EventDetail = () => {
             <h2 className="font-semibold text-[30px]">How to Book:</h2>
 
             <p className="text-[18px]">
-              Visit our website, explore the "Seascape Elegance" package, and customize it to suit your preferences. Our user-friendly platform allows you to choose your vessel, select the duration, and add extra services with ease. Let "Seascape Elegance" by Rent Yacht and Boat be the canvas for your unforgettable moments on the water. Book now and set sail for an experience that combines elegance, excitement, and the beauty of the open seas.
+              Visit our website, explore the &quot;Seascape Elegance&quot; package, and customize it to suit your preferences. Our user-friendly platform allows you to choose your vessel, select the duration, and add extra services with ease. Let &quot;Seascape Elegance&quot; by Rent Yacht and Boat be the canvas for your unforgettable moments on the water. Book now and set sail for an experience that combines elegance, excitement, and the beauty of the open seas.
             </p>
           </div>
         </div>
